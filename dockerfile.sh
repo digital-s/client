@@ -29,7 +29,6 @@ RUN apt-get update && \\
     apt-get install -y curl git libmpdec-dev uuid-dev unzip && \\
     docker-php-ext-install sockets && \\
     pecl install msgpack && docker-php-ext-enable msgpack && \\
-    pecl install decimal && docker-php-ext-enable decimal && \\
     pecl install uuid && docker-php-ext-enable uuid${RUN_CMDS}
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
